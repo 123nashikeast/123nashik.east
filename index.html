@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>१२३ नाशिक पूर्व विधानसभा मतदार संघ</title>
+    <title>123 Nashik East AC | १२३ नाशिक पूर्व विधानसभा मतदार संघ</title>
 
     <style>
         * {
@@ -14,32 +14,50 @@
         body {
             margin: 0;
             font-family: Arial, "Noto Sans Devanagari", sans-serif;
-            background: #f5f7fa;
+            background: #f4f7fb;
             color: #222;
         }
 
         header {
-            background: #1d4ed8;
+            background: #1558b0;
             color: white;
-            padding: 25px 15px;
             text-align: center;
+            padding: 25px 15px;
+        }
+
+        header img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            background: white;
+            border-radius: 12px;
+            padding: 5px;
+            margin-bottom: 12px;
         }
 
         header h1 {
-            margin: 0;
-            font-size: 28px;
+            margin: 5px 0;
+            font-size: 27px;
+        }
+
+        header p {
+            margin: 5px 0;
+            font-size: 17px;
         }
 
         nav {
             background: white;
-            padding: 12px;
+            padding: 15px;
             text-align: center;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+            position: sticky;
+            top: 0;
+            z-index: 10;
         }
 
         nav a {
             text-decoration: none;
-            color: #1d4ed8;
+            color: #1558b0;
             font-weight: bold;
             margin: 0 15px;
         }
@@ -52,47 +70,84 @@
 
         .card {
             background: white;
-            margin-bottom: 20px;
             padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+            margin-bottom: 25px;
+            border-radius: 14px;
+            box-shadow: 0 3px 14px rgba(0,0,0,0.08);
         }
 
         .card h2 {
-            color: #1d4ed8;
-            margin-top: 0;
+            color: #1558b0;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 10px;
         }
 
         .button {
             display: block;
-            background: #2563eb;
-            color: white;
             text-decoration: none;
-            padding: 15px;
+            background: #1558b0;
+            color: white;
+            padding: 15px 18px;
             margin: 12px 0;
             border-radius: 8px;
-            text-align: center;
             font-weight: bold;
+            text-align: center;
+            transition: 0.2s;
         }
 
         .button:hover {
-            background: #1e40af;
+            background: #0d3f82;
+            transform: translateY(-1px);
         }
 
         .green {
-            background: #15803d;
+            background: #16803c;
         }
 
         .green:hover {
-            background: #166534;
+            background: #0f632d;
+        }
+
+        .orange {
+            background: #e67e22;
+        }
+
+        .orange:hover {
+            background: #c85f0a;
+        }
+
+        .red {
+            background: #c62828;
+        }
+
+        .red:hover {
+            background: #9e1f1f;
+        }
+
+        .info {
+            background: #eef5ff;
+            border-left: 5px solid #1558b0;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 5px;
+        }
+
+        .contact {
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.8;
         }
 
         footer {
             background: #1f2937;
             color: white;
             text-align: center;
-            padding: 20px;
+            padding: 25px 15px;
             margin-top: 40px;
+        }
+
+        footer p {
+            margin: 6px 0;
         }
 
         @media (max-width: 600px) {
@@ -100,8 +155,16 @@
                 font-size: 21px;
             }
 
+            header p {
+                font-size: 15px;
+            }
+
             .card {
                 padding: 18px;
+            }
+
+            nav a {
+                margin: 0 8px;
             }
         }
     </style>
@@ -110,45 +173,136 @@
 <body>
 
 <header>
+
+    <img src="https://lh3.googleusercontent.com/sitesv/AG8ngQVdRCFngI4jsjR3P99rNr-Ci6Ykdtg8bhgmqTJnvzHF7EwXHFuTJIXnOPC_NzENHiaVy8ILUXzt7Fag9uf16pTJjmUzqM39_ZfzG5ZZpe4nppvv3gAIacH28ow63oIJSi7qEFyQVjwfFhGnyxCrv2C_6hHUbyqFzz9Ia7rEyLphIHEj54nVurDhZrD2HYw=w16383"
+         alt="123 Nashik East AC">
+
     <h1>१२३ नाशिक पूर्व विधानसभा मतदार संघ</h1>
+    <p>123 Nashik East AC</p>
+
 </header>
 
 <nav>
     <a href="#home">Home</a>
+    <a href="#voter">मतदार सेवा</a>
+    <a href="#nmc">नाशिक महानगरपालिका</a>
+    <a href="#contact">संपर्क</a>
 </nav>
 
 <div class="container">
 
+    <!-- Home -->
     <div class="card" id="home">
-        <h2>मतदार सेवा</h2>
+        <h2>Home</h2>
 
-        <a href="#" class="button">
-            Search Your Name in Last SIR
+        <a class="button"
+           href="https://sites.google.com/view/123nashikeastac/home?authuser=0"
+           target="_blank">
+            123 Nashik East AC – मूळ वेबसाइट
         </a>
 
-        <a href="#" class="button">
-            Search Your Name in Voter List
-        </a>
+        <div class="info">
+            १२३ नाशिक पूर्व विधानसभा मतदार संघ, नाशिक
+        </div>
     </div>
 
-    <div class="card">
+
+    <!-- Voter Services -->
+    <div class="card" id="voter">
+
+        <h2>Search Your Name in Last SIR</h2>
+
+        <a class="button"
+           href="https://voters.eci.gov.in/searchInSIR/S2UA4DPDF-JK4QWODSE"
+           target="_blank">
+            🔎 Search Your Name in Last SIR
+        </a>
+
+        <a class="button orange"
+           href="https://ceoelection.maharashtra.gov.in/2002/2002rolldata.aspx"
+           target="_blank">
+            📄 Download Last SIR 2002 PDF Data
+        </a>
+
+
+        <h2>Search Your Name in Voter List</h2>
+
+        <a class="button"
+           href="https://electoralsearch.eci.gov.in/uesfmempmlkypo"
+           target="_blank">
+            🔎 Search Your Name in Voter List
+        </a>
+
+        <a class="button green"
+           href="https://voters.eci.gov.in/download-eroll"
+           target="_blank">
+            📥 Download Electoral Roll
+        </a>
+
+        <a class="button red"
+           href="https://electoralsearch.eci.gov.in/pollingstation"
+           target="_blank">
+            📍 Know Your Polling Station, AC, PC
+        </a>
+
+    </div>
+
+
+    <!-- Nashik Municipal Corporation -->
+    <div class="card" id="nmc">
+
         <h2>नाशिक महानगरपालिका नाशिक</h2>
 
-        <a href="#" class="button">
-            Month wise list of Addition, Deletion &amp; Updation
+        <a class="button"
+           href="https://nashik.localbody.org/Home/Voter_Search"
+           target="_blank">
+            🔎 Voter Search Link
         </a>
 
-        <a href="https://drive.google.com/drive/folders/1GVSxP5QN3l-t3QMEKmaAtGk5Wo4RgV54?usp=sharing"
-           target="_blank"
-           class="button green">
-            Uncollectable ASDD List
+        <h2>Month wise list of Addition, Deletion &amp; Updation</h2>
+
+        <a class="button orange"
+           href="#"
+           onclick="alert('ही लिंक अद्याप उपलब्ध केलेली नाही.'); return false;">
+            📋 Month wise list of Addition, Deletion &amp; Updation
         </a>
+
+        <a class="button green"
+           href="https://drive.google.com/drive/folders/1GVSxP5QN3l-t3QMEKmaAtGk5Wo4RgV54?usp=sharing"
+           target="_blank">
+            📂 Uncollectable ASDD List
+        </a>
+
+    </div>
+
+
+    <!-- Contact -->
+    <div class="card contact" id="contact">
+
+        <h2>संपर्क</h2>
+
+        <p><strong>१२३ नाशिक पूर्व विधानसभा मतदार संघ, नाशिक</strong></p>
+
+        <p><strong>जिल्हाधिकारी कार्यालय, नाशिक</strong></p>
+
+        <p>☎️ Contact Number - 0253 2310656</p>
+
+        <a class="button"
+           href="tel:02532310656">
+            ☎️ कॉल करा
+        </a>
+
     </div>
 
 </div>
 
+
 <footer>
-    <p>१२३ नाशिक पूर्व विधानसभा मतदार संघ</p>
+
+    <p><strong>१२३ नाशिक पूर्व विधानसभा मतदार संघ, नाशिक</strong></p>
+    <p>जिल्हाधिकारी कार्यालय, नाशिक</p>
+    <p>☎️ 0253 2310656</p>
+
 </footer>
 
 </body>
