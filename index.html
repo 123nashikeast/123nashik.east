@@ -216,77 +216,141 @@
 
 
         /* =========================
-           VOTER SERVICES BUTTONS
+           ATTRACTIVE VOTER SERVICES
         ========================= */
         .voter-services {
-            width: 90%;
-            max-width: 900px;
-            margin: 30px auto;
+            width: 92%;
+            max-width: 980px;
+            margin: 28px auto 40px;
         }
 
         .service-card {
-            margin-bottom: 14px;
-            border-radius: 6px;
+            margin-bottom: 15px;
+            border-radius: 10px;
             overflow: hidden;
-            background: #ffffff;
-            box-shadow: 0 2px 7px rgba(0, 0, 0, 0.15);
+            background: #fff;
+            border: 1px solid #e1e1e8;
+            box-shadow: 0 3px 10px rgba(35, 32, 95, 0.12);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 5px 14px rgba(35, 32, 95, 0.17);
         }
 
         .service-button {
             width: 100%;
-            min-height: 58px;
+            min-height: 62px;
             border: none;
             outline: none;
-            background: #d9d9e8;
-            color: #333;
-            padding: 0 22px;
+            background: linear-gradient(135deg, #e4e4f1, #d7d7e7);
+            color: #252525;
+            padding: 0 20px;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            gap: 15px;
             font-size: 17px;
-            font-weight: 600;
+            font-weight: 700;
             cursor: pointer;
             text-align: left;
             text-decoration: none;
-            transition: 0.25s;
+            transition: all 0.25s ease;
         }
 
         .service-button:hover {
-            background: #c8c8dc;
+            background: linear-gradient(135deg, #dcdcec, #cecee1);
         }
 
         .service-button.active {
-            background: #17135c;
+            background: linear-gradient(135deg, #5140b8, #211b73);
             color: white;
         }
 
+        .service-label {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+            min-width: 0;
+        }
+
+        .button-icon {
+            width: 36px;
+            height: 36px;
+            flex: 0 0 36px;
+            border-radius: 9px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.72);
+            font-size: 20px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.10);
+        }
+
+        .service-button.active .button-icon {
+            background: rgba(255, 255, 255, 0.18);
+        }
+
         .arrow {
-            font-size: 25px;
-            transition: transform 0.25s;
+            width: 30px;
+            height: 30px;
+            flex: 0 0 30px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 18px;
+            background: rgba(255,255,255,0.55);
+            transition: transform 0.25s ease;
+        }
+
+        .service-button.active .arrow {
+            background: rgba(255,255,255,0.18);
         }
 
         .service-content {
             display: none;
-            background: white;
-            padding: 8px 25px 12px 25px;
+            background: #ffffff;
+            padding: 8px 16px 12px;
+            border-top: 1px solid #ececf2;
         }
 
         .service-content a {
-            display: block;
-            padding: 12px 8px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            min-height: 48px;
+            padding: 8px 10px;
+            margin: 4px 0;
+            border-radius: 8px;
             color: #333;
             font-size: 15px;
+            font-weight: 600;
             text-decoration: none;
-            border-bottom: 1px solid #eeeeee;
+            transition: all 0.2s ease;
         }
 
         .service-content a:hover {
-            color: #17135c;
-            background: #f5f5f5;
+            color: #211b73;
+            background: #f2f1fb;
+            padding-left: 15px;
         }
 
-        .service-content a:last-child {
-            border-bottom: none;
+        .tab-icon {
+            width: 32px;
+            height: 32px;
+            flex: 0 0 32px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            background: #ecebf8;
+            font-size: 17px;
+        }
+
+        .service-content a:hover .tab-icon {
+            background: #dedcf4;
         }
 
         .single-button {
@@ -296,13 +360,55 @@
         }
 
         .external-arrow {
-            font-size: 20px;
+            width: 30px;
+            height: 30px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.55);
+            font-size: 18px;
         }
 
-        .site-title a,
-        .constituency a {
-            text-decoration: none;
-            color: inherit;
+        @media (max-width: 700px) {
+            .voter-services {
+                width: 94%;
+                margin-top: 20px;
+            }
+
+            .service-button {
+                min-height: 58px;
+                padding: 0 13px;
+                font-size: 14px;
+            }
+
+            .service-label {
+                gap: 9px;
+            }
+
+            .button-icon {
+                width: 33px;
+                height: 33px;
+                flex-basis: 33px;
+                font-size: 18px;
+            }
+
+            .service-content {
+                padding: 7px 9px 10px;
+            }
+
+            .service-content a {
+                font-size: 13px;
+                min-height: 45px;
+                gap: 9px;
+            }
+
+            .tab-icon {
+                width: 29px;
+                height: 29px;
+                flex-basis: 29px;
+                font-size: 15px;
+            }
         }
 
         @media (max-width: 700px) {
@@ -492,16 +598,16 @@
 
         <div class="service-card">
             <button class="service-button" onclick="toggleService('sir')">
-                <span>📋 &nbsp; Search Your Name in Last SIR</span>
+                <span class="service-label"><span class="button-icon">📋</span><span>Search Your Name in Last SIR</span></span>
                 <span class="arrow" id="sir-arrow">⌄</span>
             </button>
 
             <div class="service-content" id="sir">
                 <a href="https://voters.eci.gov.in/searchInSIR/S2UA4DPDF-JK4QWODSE" target="_blank" rel="noopener noreferrer">
-                    ▪ &nbsp; Search Your Name in Last SIR
+                    <span class="tab-icon">🔎</span><span>Search Your Name in Last SIR</span>
                 </a>
                 <a href="https://ceoelection.maharashtra.gov.in/2002/2002rolldata.aspx" target="_blank" rel="noopener noreferrer">
-                    ▪ &nbsp; Download Last SIR 2002 PDF Data
+                    <span class="tab-icon">📄</span><span>Download Last SIR 2002 PDF Data</span>
                 </a>
             </div>
         </div>
@@ -509,19 +615,19 @@
 
         <div class="service-card">
             <button class="service-button" onclick="toggleService('voter')">
-                <span>🗳️ &nbsp; Search Your Name in Voter List</span>
+                <span class="service-label"><span class="button-icon">🗳️</span><span>Search Your Name in Voter List</span></span>
                 <span class="arrow" id="voter-arrow">⌄</span>
             </button>
 
             <div class="service-content" id="voter">
                 <a href="https://electoralsearch.eci.gov.in/uesfmempmlkypo" target="_blank" rel="noopener noreferrer">
-                    ▪ &nbsp; Search Your Name in Voter List
+                    <span class="tab-icon">🔍</span><span>Search Your Name in Voter List</span>
                 </a>
                 <a href="https://voters.eci.gov.in/download-eroll" target="_blank" rel="noopener noreferrer">
-                    ▪ &nbsp; Download Electoral Roll
+                    <span class="tab-icon">📥</span><span>Download Electoral Roll</span>
                 </a>
                 <a href="https://electoralsearch.eci.gov.in/pollingstation" target="_blank" rel="noopener noreferrer">
-                    ▪ &nbsp; Know Your Polling Station, AC, PC
+                    <span class="tab-icon">📍</span><span>Know Your Polling Station, AC, PC</span>
                 </a>
             </div>
         </div>
@@ -532,7 +638,7 @@
                href="https://nashik.localbody.org/Home/Voter_Search"
                target="_blank"
                rel="noopener noreferrer">
-                <span>🏢 &nbsp; नाशिक महानगरपालिका नाशिक – Voter Search</span>
+                <span class="service-label"><span class="button-icon">🏢</span><span>नाशिक महानगरपालिका नाशिक – Voter Search</span></span>
                 <span class="external-arrow">↗</span>
             </a>
         </div>
@@ -540,19 +646,19 @@
 
         <div class="service-card">
             <button class="service-button" onclick="toggleService('month')">
-                <span>📅 &nbsp; Month wise list of Addition, Deletion &amp; Updation</span>
+                <span class="service-label"><span class="button-icon">📅</span><span>Month wise list of Addition, Deletion &amp; Updation</span></span>
                 <span class="arrow" id="month-arrow">⌄</span>
             </button>
 
             <div class="service-content" id="month">
                 <a href="https://ceoelection.maharashtra.gov.in/SearchInfo/SearchAdditionPDFmonthyear.aspx" target="_blank" rel="noopener noreferrer">
-                    ▪ &nbsp; Addition List
+                    <span class="tab-icon">➕</span><span>Addition List</span>
                 </a>
                 <a href="https://ceoelection.maharashtra.gov.in/SearchInfo/SearchDeletionPDFmonthyear.aspx" target="_blank" rel="noopener noreferrer">
-                    ▪ &nbsp; Deletion List (from November 2024)
+                    <span class="tab-icon">➖</span><span>Deletion List (from November 2024)</span>
                 </a>
                 <a href="https://ceoelection.maharashtra.gov.in/SearchInfo/SearchUpdationPDFmonthyear.aspx" target="_blank" rel="noopener noreferrer">
-                    ▪ &nbsp; Updation List
+                    <span class="tab-icon">🔄</span><span>Updation List</span>
                 </a>
             </div>
         </div>
