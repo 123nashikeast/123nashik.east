@@ -214,6 +214,115 @@
             }
         }
 
+
+        /* =========================
+           VOTER SERVICES BUTTONS
+        ========================= */
+        .voter-services {
+            width: 90%;
+            max-width: 900px;
+            margin: 30px auto;
+        }
+
+        .service-card {
+            margin-bottom: 14px;
+            border-radius: 6px;
+            overflow: hidden;
+            background: #ffffff;
+            box-shadow: 0 2px 7px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-button {
+            width: 100%;
+            min-height: 58px;
+            border: none;
+            outline: none;
+            background: #d9d9e8;
+            color: #333;
+            padding: 0 22px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 17px;
+            font-weight: 600;
+            cursor: pointer;
+            text-align: left;
+            text-decoration: none;
+            transition: 0.25s;
+        }
+
+        .service-button:hover {
+            background: #c8c8dc;
+        }
+
+        .service-button.active {
+            background: #17135c;
+            color: white;
+        }
+
+        .arrow {
+            font-size: 25px;
+            transition: transform 0.25s;
+        }
+
+        .service-content {
+            display: none;
+            background: white;
+            padding: 8px 25px 12px 25px;
+        }
+
+        .service-content a {
+            display: block;
+            padding: 12px 8px;
+            color: #333;
+            font-size: 15px;
+            text-decoration: none;
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        .service-content a:hover {
+            color: #17135c;
+            background: #f5f5f5;
+        }
+
+        .service-content a:last-child {
+            border-bottom: none;
+        }
+
+        .single-button {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .external-arrow {
+            font-size: 20px;
+        }
+
+        /* Header title links */
+        .site-title a,
+        .constituency a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        @media (max-width: 700px) {
+            .voter-services {
+                width: 94%;
+            }
+
+            .service-button {
+                min-height: 55px;
+                padding: 0 15px;
+                font-size: 14px;
+            }
+
+            .service-content a {
+                font-size: 14px;
+                padding: 11px 5px;
+            }
+        }
+
     </style>
 </head>
 
@@ -255,14 +364,14 @@
 
             <!-- LOGO -->
 
-            <div class="logo-box">
+            <a href="index.html" class="logo-box">
 
                 <img
                     src="244-2446463_gandhinagar-election-commission-of-india.png"
                     alt="Election Commission of India Logo"
                 >
 
-            </div>
+            </a>
 
 
 
@@ -270,13 +379,15 @@
 
             <div class="site-title">
 
-                <h1>
-                    १२३ नाशिक पूर्व
-                </h1>
+                <a href="index.html">
+                    <h1>
+                        १२३ नाशिक पूर्व
+                    </h1>
 
-                <p>
-                    विधानसभा मतदार संघ, नाशिक
-                </p>
+                    <p>
+                        विधानसभा मतदार संघ, नाशिक
+                    </p>
+                </a>
 
             </div>
 
@@ -289,14 +400,16 @@
 
         <div class="constituency">
 
-            <div class="english">
-                <h1>
-                123 Nashik East
-                </h1>
-                <p>
-                Assembly Constituency, Nashik
-                </p>
-            </div>
+            <a href="index.html">
+                <div class="english">
+                    <h1>
+                        123 Nashik East
+                    </h1>
+                    <p>
+                        Assembly Constituency, Nashik
+                    </p>
+                </div>
+            </a>
 
         </div>
 
@@ -305,15 +418,148 @@
 
 
 
+
+    <!-- =========================
+         VOTER SERVICES
+    ========================= -->
+
+    <div class="voter-services">
+
+        <!-- Search Your Name in Last SIR -->
+        <div class="service-card">
+
+            <button class="service-button" onclick="toggleService('sir')">
+                <span>📋 &nbsp; Search Your Name in Last SIR</span>
+                <span class="arrow" id="sir-arrow">⌄</span>
+            </button>
+
+            <div class="service-content" id="sir">
+
+                <a href="https://voters.eci.gov.in/searchInSIR/S2UA4DPDF-JK4QWODSE" target="_blank" rel="noopener noreferrer">
+                    ▪ &nbsp; Search Your Name in Last SIR
+                </a>
+
+                <a href="https://ceoelection.maharashtra.gov.in/2002/2002rolldata.aspx" target="_blank" rel="noopener noreferrer">
+                    ▪ &nbsp; Download Last SIR 2002 PDF Data
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Search Your Name in Voter List -->
+        <div class="service-card">
+
+            <button class="service-button" onclick="toggleService('voter')">
+                <span>🗳️ &nbsp; Search Your Name in Voter List</span>
+                <span class="arrow" id="voter-arrow">⌄</span>
+            </button>
+
+            <div class="service-content" id="voter">
+
+                <a href="https://electoralsearch.eci.gov.in/uesfmempmlkypo" target="_blank" rel="noopener noreferrer">
+                    ▪ &nbsp; Search Your Name in Voter List
+                </a>
+
+                <a href="https://voters.eci.gov.in/download-eroll" target="_blank" rel="noopener noreferrer">
+                    ▪ &nbsp; Download Electoral Roll
+                </a>
+
+                <a href="https://electoralsearch.eci.gov.in/pollingstation" target="_blank" rel="noopener noreferrer">
+                    ▪ &nbsp; Know Your Polling Station, AC, PC
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Nashik Municipal Corporation -->
+        <div class="service-card">
+
+            <a class="service-button single-button"
+               href="https://nashik.localbody.org/Home/Voter_Search"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <span>🏢 &nbsp; नाशिक महानगरपालिका नाशिक – Voter Search</span>
+                <span class="external-arrow">↗</span>
+
+            </a>
+
+        </div>
+
+
+        <!-- Month wise Addition, Deletion & Updation -->
+        <div class="service-card">
+
+            <button class="service-button" onclick="toggleService('month')">
+                <span>📅 &nbsp; Month wise list of Addition, Deletion &amp; Updation</span>
+                <span class="arrow" id="month-arrow">⌄</span>
+            </button>
+
+            <div class="service-content" id="month">
+
+                <a href="https://ceoelection.maharashtra.gov.in/SearchInfo/SearchAdditionPDFmonthyear.aspx" target="_blank" rel="noopener noreferrer">
+                    ▪ &nbsp; Addition List
+                </a>
+
+                <a href="https://ceoelection.maharashtra.gov.in/SearchInfo/SearchDeletionPDFmonthyear.aspx" target="_blank" rel="noopener noreferrer">
+                    ▪ &nbsp; Deletion List (from November 2024)
+                </a>
+
+                <a href="https://ceoelection.maharashtra.gov.in/SearchInfo/SearchUpdationPDFmonthyear.aspx" target="_blank" rel="noopener noreferrer">
+                    ▪ &nbsp; Updation List
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+        function toggleService(id) {
+            const content = document.getElementById(id);
+            const button = content.previousElementSibling;
+            const arrow = document.getElementById(id + "-arrow");
+
+            document.querySelectorAll(".service-content").forEach(function(item) {
+                if (item.id !== id) {
+                    item.style.display = "none";
+                    item.previousElementSibling.classList.remove("active");
+
+                    const otherArrow = document.getElementById(item.id + "-arrow");
+                    if (otherArrow) {
+                        otherArrow.style.transform = "rotate(0deg)";
+                    }
+                }
+            });
+
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                button.classList.remove("active");
+                arrow.style.transform = "rotate(0deg)";
+            } else {
+                content.style.display = "block";
+                button.classList.add("active");
+                arrow.style.transform = "rotate(180deg)";
+            }
+        }
+    </script>
+
+
     <!-- =========================
          HOME
     ========================= -->
 
     <div class="home-bar">
 
-        <div class="home-button">
+        <a href="index.html" class="home-button" style="text-decoration:none;">
             🏠 &nbsp; Home
-        </div>
+        </a>
 
     </div>
 
@@ -321,174 +567,3 @@
 
 </body>
 </html>
-
-<!-- ==========================================
-     VOTER SERVICES
-========================================== -->
-
-<section class="voter-services">
-
-    <!-- SIR SERVICES -->
-    <details class="service-group" open>
-        <summary>
-            <span>Search Your Name in Last SIR</span>
-            <span class="collapse-icon">⌃</span>
-        </summary>
-
-        <div class="service-buttons">
-
-            <a href="https://voters.eci.gov.in/searchInSIR/S2UA4DPDF-JK4QWODSE"
-               target="_blank"
-               class="service-card">
-
-                <span class="service-logo">🔎</span>
-
-                <span class="service-name">
-                    Search Your Name in Last SIR
-                </span>
-
-            </a>
-
-            <a href="https://ceoelection.maharashtra.gov.in/2002/2002rolldata.aspx"
-               target="_blank"
-               class="service-card">
-
-                <span class="service-logo">📄</span>
-
-                <span class="service-name">
-                    Download Last SIR 2002 PDF Data
-                </span>
-
-            </a>
-
-        </div>
-    </details>
-
-
-    <!-- VOTER LIST -->
-    <details class="service-group" open>
-        <summary>
-            <span>Search Your Name in Voter List</span>
-            <span class="collapse-icon">⌃</span>
-        </summary>
-
-        <div class="service-buttons">
-
-            <a href="https://electoralsearch.eci.gov.in/uesfmempmlkypo"
-               target="_blank"
-               class="service-card">
-
-                <span class="service-logo">🔎</span>
-
-                <span class="service-name">
-                    Search Your Name in Voter List
-                </span>
-
-            </a>
-
-
-            <a href="https://voters.eci.gov.in/download-eroll"
-               target="_blank"
-               class="service-card">
-
-                <span class="service-logo">📥</span>
-
-                <span class="service-name">
-                    Download Electoral Roll
-                </span>
-
-            </a>
-
-
-            <a href="https://electoralsearch.eci.gov.in/pollingstation"
-               target="_blank"
-               class="service-card">
-
-                <span class="service-logo">📍</span>
-
-                <span class="service-name">
-                    Know Your Polling Station, AC, PC
-                </span>
-
-            </a>
-
-        </div>
-    </details>
-
-
-    <!-- NASHIK MUNICIPAL CORPORATION -->
-    <details class="service-group" open>
-        <summary>
-            <span>नाशिक महानगरपालिका नाशिक – Voter Search</span>
-            <span class="collapse-icon">⌃</span>
-        </summary>
-
-        <div class="service-buttons">
-
-            <a href="https://nashik.localbody.org/Home/Voter_Search"
-               target="_blank"
-               class="service-card">
-
-                <span class="service-logo">🏛️</span>
-
-                <span class="service-name">
-                    नाशिक महानगरपालिका नाशिक – Voter Search
-                </span>
-
-            </a>
-
-        </div>
-    </details>
-
-
-    <!-- ADDITION DELETION UPDATION -->
-    <details class="service-group" open>
-        <summary>
-            <span>Month wise list of Addition, Deletion &amp; Updation</span>
-            <span class="collapse-icon">⌃</span>
-        </summary>
-
-        <div class="service-buttons">
-
-            <a href="https://ceoelection.maharashtra.gov.in/SearchInfo/SearchAdditionPDFmonthyear.aspx"
-               target="_blank"
-               class="service-card">
-
-                <span class="service-logo">➕</span>
-
-                <span class="service-name">
-                    Addition List
-                </span>
-
-            </a>
-
-
-            <a href="https://ceoelection.maharashtra.gov.in/SearchInfo/SearchDeletionPDFmonthyear.aspx"
-               target="_blank"
-               class="service-card">
-
-                <span class="service-logo">➖</span>
-
-                <span class="service-name">
-                    Deletion List (from November 2024)
-                </span>
-
-            </a>
-
-
-            <a href="https://ceoelection.maharashtra.gov.in/SearchInfo/SearchUpdationPDFmonthyear.aspx"
-               target="_blank"
-               class="service-card">
-
-                <span class="service-logo">🔄</span>
-
-                <span class="service-name">
-                    Updation List
-                </span>
-
-            </a>
-
-        </div>
-    </details>
-
-</section>
