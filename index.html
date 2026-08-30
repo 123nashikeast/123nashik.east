@@ -299,7 +299,6 @@
             font-size: 20px;
         }
 
-        /* Header title links */
         .site-title a,
         .constituency a {
             text-decoration: none;
@@ -418,6 +417,16 @@
 
 
 
+    <!-- =========================
+         HOME BUTTON - HEADER च्या खाली
+    ========================= -->
+
+    <div class="home-bar">
+        <a href="index.html" class="home-button" style="text-decoration:none;">
+            🏠 &nbsp; Home
+        </a>
+    </div>
+
 
     <!-- =========================
          VOTER SERVICES
@@ -425,96 +434,71 @@
 
     <div class="voter-services">
 
-        <!-- Search Your Name in Last SIR -->
         <div class="service-card">
-
             <button class="service-button" onclick="toggleService('sir')">
                 <span>📋 &nbsp; Search Your Name in Last SIR</span>
                 <span class="arrow" id="sir-arrow">⌄</span>
             </button>
 
             <div class="service-content" id="sir">
-
                 <a href="https://voters.eci.gov.in/searchInSIR/S2UA4DPDF-JK4QWODSE" target="_blank" rel="noopener noreferrer">
                     ▪ &nbsp; Search Your Name in Last SIR
                 </a>
-
                 <a href="https://ceoelection.maharashtra.gov.in/2002/2002rolldata.aspx" target="_blank" rel="noopener noreferrer">
                     ▪ &nbsp; Download Last SIR 2002 PDF Data
                 </a>
-
             </div>
-
         </div>
 
 
-        <!-- Search Your Name in Voter List -->
         <div class="service-card">
-
             <button class="service-button" onclick="toggleService('voter')">
                 <span>🗳️ &nbsp; Search Your Name in Voter List</span>
                 <span class="arrow" id="voter-arrow">⌄</span>
             </button>
 
             <div class="service-content" id="voter">
-
                 <a href="https://electoralsearch.eci.gov.in/uesfmempmlkypo" target="_blank" rel="noopener noreferrer">
                     ▪ &nbsp; Search Your Name in Voter List
                 </a>
-
                 <a href="https://voters.eci.gov.in/download-eroll" target="_blank" rel="noopener noreferrer">
                     ▪ &nbsp; Download Electoral Roll
                 </a>
-
                 <a href="https://electoralsearch.eci.gov.in/pollingstation" target="_blank" rel="noopener noreferrer">
                     ▪ &nbsp; Know Your Polling Station, AC, PC
                 </a>
-
             </div>
-
         </div>
 
 
-        <!-- Nashik Municipal Corporation -->
         <div class="service-card">
-
             <a class="service-button single-button"
                href="https://nashik.localbody.org/Home/Voter_Search"
                target="_blank"
                rel="noopener noreferrer">
-
                 <span>🏢 &nbsp; नाशिक महानगरपालिका नाशिक – Voter Search</span>
                 <span class="external-arrow">↗</span>
-
             </a>
-
         </div>
 
 
-        <!-- Month wise Addition, Deletion & Updation -->
         <div class="service-card">
-
             <button class="service-button" onclick="toggleService('month')">
                 <span>📅 &nbsp; Month wise list of Addition, Deletion &amp; Updation</span>
                 <span class="arrow" id="month-arrow">⌄</span>
             </button>
 
             <div class="service-content" id="month">
-
                 <a href="https://ceoelection.maharashtra.gov.in/SearchInfo/SearchAdditionPDFmonthyear.aspx" target="_blank" rel="noopener noreferrer">
                     ▪ &nbsp; Addition List
                 </a>
-
                 <a href="https://ceoelection.maharashtra.gov.in/SearchInfo/SearchDeletionPDFmonthyear.aspx" target="_blank" rel="noopener noreferrer">
                     ▪ &nbsp; Deletion List (from November 2024)
                 </a>
-
                 <a href="https://ceoelection.maharashtra.gov.in/SearchInfo/SearchUpdationPDFmonthyear.aspx" target="_blank" rel="noopener noreferrer">
                     ▪ &nbsp; Updation List
                 </a>
-
             </div>
-
         </div>
 
     </div>
@@ -549,17 +533,6 @@
             }
         }
     </script>
-
-
-    <!-- =========================
-         HOME
-    ========================= -->
-
-    <div class="home-button">
-
-        <a href="index.html" class="home-button" style="text-decoration:none;">
-            🏠 &nbsp; Home
-        </a>
 
     </div>
 
