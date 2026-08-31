@@ -406,6 +406,93 @@
             font-size: 18px;
         }
 
+        /* =========================
+           SIR-2026 ASDD HIGHLIGHT
+        ========================= */
+        .asdd-highlight {
+            border: 2px solid #f59e0b;
+            box-shadow: 0 5px 18px rgba(245, 158, 11, 0.28);
+            position: relative;
+            animation: asddPulse 1.8s ease-in-out infinite;
+        }
+
+        @keyframes asddPulse {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 5px 18px rgba(245, 158, 11, 0.28);
+            }
+            50% {
+                transform: scale(1.012);
+                box-shadow: 0 8px 28px rgba(245, 158, 11, 0.52);
+            }
+        }
+
+        .asdd-highlight .asdd-badge {
+            animation: asddBadgeBlink 1.2s ease-in-out infinite;
+        }
+
+        @keyframes asddBadgeBlink {
+            0%, 100% { opacity: 1; transform: translateY(-50%); }
+            50% { opacity: 0.62; transform: translateY(-50%); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .asdd-highlight,
+            .asdd-highlight .asdd-badge {
+                animation: none;
+            }
+        }
+
+        .asdd-highlight .service-button {
+            background: linear-gradient(135deg, #fff3c4, #ffd76a);
+            color: #5b3b00;
+            min-height: 68px;
+            position: relative;
+        }
+
+        .asdd-highlight .service-button:hover {
+            background: linear-gradient(135deg, #ffeaa0, #ffc94d);
+            box-shadow: 0 6px 18px rgba(245, 158, 11, 0.30);
+        }
+
+        .asdd-highlight .button-icon {
+            background: #fff;
+            color: #d97706;
+            border: 1px solid #f4c56b;
+        }
+
+        .asdd-badge {
+            position: absolute;
+            top: 50%;
+            right: 58px;
+            transform: translateY(-50%);
+            z-index: 2;
+            padding: 4px 11px;
+            border-radius: 20px;
+            background: #b45309;
+            color: #fff;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: .4px;
+            box-shadow: 0 2px 7px rgba(0,0,0,.18);
+        }
+
+        .asdd-highlight .external-arrow {
+            background: rgba(255,255,255,.75);
+            color: #92400e;
+        }
+
+        @media (max-width: 700px) {
+            .asdd-highlight .service-button {
+                min-height: 62px;
+            }
+
+            .asdd-badge {
+                right: 50px;
+                font-size: 10px;
+            }
+        }
+
         @media (max-width: 700px) {
             .voter-services {
                 width: 94%;
@@ -646,6 +733,29 @@
     ========================= -->
 
     <div class="voter-services">
+
+        <!-- VOTER REGISTRATION FORMS - TOP BUTTON -->
+        <div class="service-card">
+            <a class="service-button single-button"
+               href="https://voters.eci.gov.in/login"
+               target="_blank"
+               rel="noopener noreferrer">
+                <span class="service-label"><span class="button-icon">📝</span><span>Voter Registration Forms</span></span>
+                <span class="external-arrow">↗</span>
+            </a>
+        </div>
+
+        <!-- SIR-2026 DRAFT ROLL - ASDD LIST -->
+        <div class="service-card asdd-highlight">
+            <span class="asdd-badge">IMPORTANT</span>
+            <a class="service-button single-button"
+               href="https://drive.google.com/drive/folders/1MRTGnDykKscHhRNAZRgHP0om5EcsU5CG?usp=sharing"
+               target="_blank"
+               rel="noopener noreferrer">
+                <span class="service-label"><span class="button-icon">📋</span><span>SIR-2026 Draft Roll - ASDD List</span></span>
+                <span class="external-arrow">↗</span>
+            </a>
+        </div>
 
         <div class="service-card">
             <button class="service-button" onclick="toggleService('sir')">
